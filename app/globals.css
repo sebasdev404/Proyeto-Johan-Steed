@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; overflow-x: hidden; background: #07111f; color: #f5f8fa; font-family: Manrope, Arial, sans-serif; font-size: 17px; }
+::selection { background: #b7f170; color: #07111f; }
+.grid-bg { background-image: linear-gradient(rgba(145,180,210,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(145,180,210,.08) 1px, transparent 1px); background-size: 52px 52px; }
+.noise { background: radial-gradient(circle at 72% 8%, #163653 0, transparent 29%), radial-gradient(circle at 10% 71%, #103127 0, transparent 26%); }
+.eyebrow { color: #b7f170; font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.display { font-weight: 800; letter-spacing: -.07em; line-height: .98; }
+.section { position: relative; overflow: hidden; padding: 140px max(24px, calc((100vw - 1180px) / 2)); }
+.panel { border: 1px solid rgba(185,215,235,.16); background: rgba(16,35,54,.64); box-shadow: 0 24px 70px rgba(0,0,0,.22); backdrop-filter: blur(14px); }
+.data-note { color: #64748b; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.line { height: 1px; background: linear-gradient(90deg, transparent, #5e8cac, transparent); }
+.dash-grid { display: grid; grid-template-columns: 160px 1fr; min-height: 530px; }
+.animate-pulse-soft { animation: pulse-soft 4s ease-in-out infinite; }
+@keyframes pulse-soft { 50% { transform: scale(1.08); opacity: .55; } }
+@media (max-width: 700px) { .section { padding: 88px 20px; } .display { letter-spacing: -.055em; } .dash-grid { grid-template-columns: 1fr; } .dash-side { display: none; } .grid-bg { background-size: 34px 34px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
