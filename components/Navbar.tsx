@@ -16,7 +16,7 @@ export function Navbar() {
     <nav className="mx-auto flex h-20 max-w-[1180px] items-center justify-between px-6">
       <a href="#inicio" className="leading-none text-white"><b className="text-xl tracking-[-.08em]">CIVIA</b><span className="mt-1 block text-[9px] uppercase tracking-[.13em] text-slate-300">Propuesta de Inteligencia Ciudadana</span></a>
       <div className="hidden gap-7 text-sm font-semibold text-slate-100 md:flex">{links.map(([label, href]) => <a key={href} className="transition hover:text-[#b7f170]" href={href}>{label}</a>)}</div>
-      <span className="rounded-full border border-white/25 px-3 py-1.5 text-xs font-semibold text-white">Concepto</span>
+      <a href="/demo" className="rounded-full bg-[#b7f170] px-3 py-1.5 text-xs font-bold text-[#07111f] transition hover:scale-105">Probar demo</a>
     </nav>
   </motion.header>;
 }
